@@ -43,7 +43,11 @@ function Get-VaultCredential #{{{
         Write-Verbose "Found:   @{ Resource=`"$($_.Resource)`"; UserName=`"$($_.UserName)`"; Password=`"$($_.Password)`" }"
         $_.RetrievePassword()
         Write-Verbose "Decoded: @{ Resource=`"$($_.Resource)`"; UserName=`"$($_.UserName)`"; Password=`"$($_.Password)`" }"
-        New-Object System.Management.Automation.PSCredential $_.UserName, (ConvertTo-SecureString $_.Password.Trim() -AsPlainText -Force) | `
+        if ([string]::IsNullOrWhiteSpace($_.Password))
+        {
+          Throw [ArgumentNullException] 'password', 'Password is null or contains white spaces only'
+        }
+        New-Object System.Management.Automation.PSCredential $_.UserName, (ConvertTo-SecureString $_.Password -AsPlainText -Force) | `
         Add-Member -NotePropertyName 'Resource' -NotePropertyValue $_.Resource -Force -PassThru
       }
     }
