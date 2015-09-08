@@ -1,3 +1,4 @@
+if (Get-Module Posh-Vault) { return }
 
 #Requires -Version 3.0
 if ($PSVersionTable.PSVersion.Major -lt 3)
@@ -20,10 +21,3 @@ Push-Location $PSScriptRoot
 . .\Set-VaultCredential.ps1
 . .\Remove-VaultCredential.ps1
 Pop-Location
-
-Export-ModuleMember `
-  -Function @(
-    'Get-VaultCredential',
-    'Set-VaultCredential'
-    'Remove-VaultCredential'
-  )
