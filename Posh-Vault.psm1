@@ -1,3 +1,4 @@
+if (Get-Module Posh-Vault) { return }
 
 #Requires -Version 3.0
 if ($PSVersionTable.PSVersion.Major -lt 3)
