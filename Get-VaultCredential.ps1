@@ -70,8 +70,7 @@ function Get-VaultCredential #{{{
         {
           Throw [ArgumentNullException] 'password', 'Password is null or contains white spaces only'
         }
-        New-Object System.Management.Automation.PSCredential $_.UserName, (ConvertTo-SecureString $_.Password -AsPlainText -Force) | `
-        Add-Member -NotePropertyName 'Resource' -NotePropertyValue $_.Resource -Force -PassThru
+        New-Object System.Management.Automation.PSCredential $_.UserName, (ConvertTo-SecureString $_.Password -AsPlainText -Force)
       }
     }
     catch
