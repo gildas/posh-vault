@@ -1,6 +1,30 @@
 <#
 .SYNOPSIS
   Get the credential stored in the PasswordVault for a given resource.
+.PARAMETER Resource
+  The resource to fetch from the PasswordVault
+.PARAMETER User
+  The user connected to the resource
+.EXAMPLE
+  Get-Credential https://msdn.microsoft.com
+
+  Description
+  -----------
+  Gets the credemtials for all users stored in the PasswordVault for the resource https://msdn.microsoft.com
+
+.EXAMPLE
+  Get-Credential -User john.doe
+
+  Description
+  -----------
+  Gets the credentials for all the resources from the PasswordVault used by john.doe
+
+.EXAMPLE
+  Get-Credential -Resource https://msdn.microsoft.com -User CONTOSO\john.doe
+
+  Description
+  -----------
+  Gets the credentials for the user john.doe on domain CONTOSO for the resource https://msdn.microsoft.com
 #>
 function Get-VaultCredential #{{{
 {
@@ -46,8 +70,7 @@ function Get-VaultCredential #{{{
         {
           Throw [ArgumentNullException] 'password', 'Password is null or contains white spaces only'
         }
-        New-Object System.Management.Automation.PSCredential $_.UserName, (ConvertTo-SecureString $_.Password -AsPlainText -Force) | `
-        Add-Member -NotePropertyName 'Resource' -NotePropertyValue $_.Resource -Force -PassThru
+        New-Object System.Management.Automation.PSCredential $_.UserName, (ConvertTo-SecureString $_.Password -AsPlainText -Force)
       }
     }
     catch
