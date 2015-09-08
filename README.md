@@ -6,7 +6,7 @@ Installation
 
 If you have [PsGet](http://psget.net) installed just run:
 ```posh
-Install-Module https://github.com/gildas/posh-vault/releases/download/0.1.0/posh-vault-0.1.0.zip
+Install-Module -ModuleUrl https://github.com/gildas/posh-vault/releases/download/0.1.0/posh-vault-0.1.0.zip
 ```
 
 Copy the following line and paste it in a Powershell:
