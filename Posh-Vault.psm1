@@ -21,10 +21,3 @@ Push-Location $PSScriptRoot
 . .\Set-VaultCredential.ps1
 . .\Remove-VaultCredential.ps1
 Pop-Location
-
-Export-ModuleMember `
-  -Function @(
-    'Get-VaultCredential',
-    'Set-VaultCredential'
-    'Remove-VaultCredential'
-  )
