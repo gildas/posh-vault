@@ -1,4 +1,4 @@
-# Posh-Vaul
+# Posh-Vault
 Powershell module to use Windows 8+ and 2012+ Password Vault
 
 Installation
