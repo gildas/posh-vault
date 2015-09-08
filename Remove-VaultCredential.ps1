@@ -1,6 +1,19 @@
 <#
 .SYNOPSIS
   Remove the given credential in the PasswordVault for a given resource.
+.PARAMETER Resource
+  The resource to remove from the PasswordVault
+.PARAMETER User
+  The user connected to the resource
+.PARAMETER Credential
+  The user stored in Credential connected to the resource
+
+.EXAMPLE
+  Remove-Credential -Resource https://msdn.microsoft.com -User CONTOSO\john.doe
+
+  Description
+  -----------
+  Removes the credentials for the user john.doe on domain CONTOSO for the resource https://msdn.microsoft.com
 #>
 function Remove-VaultCredential #{{{
 {

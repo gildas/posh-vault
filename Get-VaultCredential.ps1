@@ -1,6 +1,30 @@
 <#
 .SYNOPSIS
   Get the credential stored in the PasswordVault for a given resource.
+.PARAMETER Resource
+  The resource to fetch from the PasswordVault
+.PARAMETER User
+  The user connected to the resource
+.EXAMPLE
+  Get-Credential https://msdn.microsoft.com
+
+  Description
+  -----------
+  Gets the credemtials for all users stored in the PasswordVault for the resource https://msdn.microsoft.com
+
+.EXAMPLE
+  Get-Credential -User john.doe
+
+  Description
+  -----------
+  Gets the credentials for all the resources from the PasswordVault used by john.doe
+
+.EXAMPLE
+  Get-Credential -Resource https://msdn.microsoft.com -User CONTOSO\john.doe
+
+  Description
+  -----------
+  Gets the credentials for the user john.doe on domain CONTOSO for the resource https://msdn.microsoft.com
 #>
 function Get-VaultCredential #{{{
 {
