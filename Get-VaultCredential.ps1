@@ -40,9 +40,8 @@ function Get-VaultCredential #{{{
           $vault.RetrieveAll()
         }
       } | ForEach {
-        Write-Verbose "Found:   @{ Resource=`"$($_.Resource)`"; UserName=`"$($_.UserName)`"; Password=`"$($_.Password)`" }"
+        Write-Verbose "Found: @{ Resource=`"$($_.Resource)`"; UserName=`"$($_.UserName)`"; Password=`"$($_.Password)`" }"
         $_.RetrievePassword()
-        Write-Verbose "Decoded: @{ Resource=`"$($_.Resource)`"; UserName=`"$($_.UserName)`"; Password=`"$($_.Password)`" }"
         if ([string]::IsNullOrWhiteSpace($_.Password))
         {
           Throw [ArgumentNullException] 'password', 'Password is null or contains white spaces only'
