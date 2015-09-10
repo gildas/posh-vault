@@ -6,13 +6,13 @@ Installation
 
 If you have [PsGet](http://psget.net) installed just run:
 ```posh
-Install-Module -ModuleUrl https://github.com/gildas/posh-vault/releases/download/0.1.1/posh-vault-0.1.1.zip
+Install-Module -ModuleUrl https://github.com/gildas/posh-vault/releases/download/0.1.2/posh-vault-0.1.2.zip
 ```
 
 Copy the following line and paste it in a Powershell:
 
 ```posh
-Start-BitsTransfer http://tinyurl.com/posh-vault-0-1-1 $env:TEMP ; & $env:TEMP\Install.ps1
+Start-BitsTransfer http://tinyurl.com/posh-vault-0-1-2 $env:TEMP ; & $env:TEMP\Install.ps1
 ```
 
 To install the latest development version, use one of the followings:
