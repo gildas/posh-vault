@@ -94,4 +94,5 @@ PS> Remove-VaultCredential -User gildas
 
 AUTHORS
 =======
-[![endorse](https://api.coderwall.com/gildas/endorsecount.png)](https://coderwall.com/gildas)
+
+Gildas Cherruel
