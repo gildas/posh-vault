@@ -13,7 +13,7 @@
 RootModule = 'Posh-Vault.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.2'
+ModuleVersion = '0.1.4'
 
 # ID used to uniquely identify this module
 GUID = 'd35bfd12-5e2e-43c5-a5b1-2c284753e69a'
@@ -25,7 +25,7 @@ Author = 'Gildas Cherruel'
 CompanyName = ''
 
 # Copyright statement for this module
-Copyright = '(c) 2015 gildas.cherruel. All rights reserved.'
+Copyright = '(c) 2015, 2016 gildas.cherruel. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = 'Powershell module to use the Password Vault in Windows 8+'
