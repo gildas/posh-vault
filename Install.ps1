@@ -5,7 +5,7 @@ Param(
 )
 
 $ModuleName    = 'Posh-Vault'
-$ModuleVersion = '0.1.2'
+$ModuleVersion = '0.1.4'
 $GithubRoot    = "https://raw.githubusercontent.com/gildas/posh-vault/$ModuleVersion"
 
 if ([string]::IsNullOrEmpty($Path))

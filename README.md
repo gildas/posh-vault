@@ -4,15 +4,15 @@ Powershell module to use Windows 8+ and 2012+ Password Vault
 Installation
 ------------
 
-If you have [PsGet](http://psget.net) installed just run:
+If you have [PowerShellGet](http://www.powershellgallery.com) installed just run:
 ```posh
-Install-Module -ModuleUrl https://github.com/gildas/posh-vault/releases/download/0.1.2/posh-vault-0.1.2.zip
+Install-Module Posh-Vault
 ```
 
 Copy the following line and paste it in a Powershell:
 
 ```posh
-Start-BitsTransfer http://tinyurl.com/posh-vault-0-1-2 $env:TEMP ; & $env:TEMP\Install.ps1
+Start-BitsTransfer http://tinyurl.com/posh-vault-0-1-4 $env:TEMP ; & $env:TEMP\Install.ps1
 ```
 
 To install the latest development version, use one of the followings:
