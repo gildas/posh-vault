@@ -20,4 +20,5 @@ Push-Location $PSScriptRoot
 . .\Get-VaultCredential.ps1
 . .\Set-VaultCredential.ps1
 . .\Remove-VaultCredential.ps1
+. .\Posh-Vault.ArgumentCompleters.ps1
 Pop-Location
