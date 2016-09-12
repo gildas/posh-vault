@@ -92,7 +92,7 @@ FileList = @(
   'LICENSE',
   'README.md'
   'VERSION',
-  'Posh-Vault-ArgumentCompleters.ps1',
+  'Posh-Vault.ArgumentCompleters.ps1',
   'Get-VaultCredential.ps1',
   'Remove-VaultCredential.ps1',
   'Set-VaultCredential.ps1'
