@@ -13,7 +13,7 @@
 RootModule = 'Posh-Vault.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.4'
+ModuleVersion = '0.1.5'
 
 # ID used to uniquely identify this module
 GUID = 'd35bfd12-5e2e-43c5-a5b1-2c284753e69a'
@@ -49,7 +49,7 @@ PowerShellVersion = '3.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-# RequiredModules = @()
+RequiredModules = @()
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
@@ -67,22 +67,37 @@ PowerShellVersion = '3.0'
 # NestedModules = @()
 
 # Functions to export from this module
-FunctionsToExport = 'Get-VaultCredential', 'Set-VaultCredential', 'Remove-VaultCredential'
+FunctionsToExport = @(
+  'Get-VaultCredential',
+  'Set-VaultCredential',
+  'Remove-VaultCredential'
+);
 
 # Cmdlets to export from this module
-CmdletsToExport = ''
+#CmdletsToExport = ''
 
 # Variables to export from this module
-VariablesToExport = ''
+#VariablesToExport = ''
 
 # Aliases to export from this module
-AliasesToExport = ''
+#AliasesToExport = ''
 
 # List of all modules packaged with this module
 # ModuleList = @()
 
 # List of all files packaged with this module
-# FileList = @()
+FileList = @(
+  'Posh-Vault.psd1',
+  'Posh-Vault.psm1',
+  'LICENSE',
+  'README.md'
+  'VERSION',
+  'Posh-Vault-ArgumentCompleters.ps1',
+  'Get-VaultCredential.ps1',
+  'Remove-VaultCredential.ps1',
+  'Set-VaultCredential.ps1'
+
+)
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess
 # PrivateData = ''
