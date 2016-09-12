@@ -9,22 +9,11 @@ If you have [PowerShellGet](http://www.powershellgallery.com) installed just run
 Install-Module Posh-Vault
 ```
 
-Copy the following line and paste it in a Powershell:
+If not, copy the following line and paste it in a Powershell:
 
 ```posh
-Start-BitsTransfer http://tinyurl.com/posh-vault-0-1-4 $env:TEMP ; & $env:TEMP\Install.ps1
+Start-BitsTransfer https://raw.githubusercontent.com/gildas/posh-vault/master/Install.ps1 $env:TEMP ; & $env:TEMP\Install.ps1
 ```
-
-To install the latest development version, use one of the followings:
-
-```posh
-Install-Module -ModuleUrl https://github.com/gildas/posh-vault/archive/dev.zip
-```
-
-```posh
-Start-BitsTransfer http://tinyurl.com/posh-vault-dev $env:TEMP ; & $env:TEMP\Install.ps1
-```
-
 
 
 The following options are accepted:
@@ -41,7 +30,7 @@ The following options are accepted:
 Note
 ----
 
-Due to limitations in the PasswordVault API, only te Web Credentials are accessible.
+Due to limitations in the PasswordVault API, only the Web Credentials are accessible.
 
 Usage
 -----

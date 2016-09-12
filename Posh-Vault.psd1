@@ -13,7 +13,7 @@
 RootModule = 'Posh-Vault.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.4'
+ModuleVersion = '0.1.5'
 
 # ID used to uniquely identify this module
 GUID = 'd35bfd12-5e2e-43c5-a5b1-2c284753e69a'
